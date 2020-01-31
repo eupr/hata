@@ -77,12 +77,13 @@ a:hover {
 }
 .in:before {
   content: "";
-  display: block;
+  display: inline-block;
   width: 20px;
   height: 20px;
   transition: all 0.25s ease;
   background: url(../img1/sprite.png);
   left: -30px;
+  vertical-align: middle;
 }
 .in:hover:before {
   background-position: 0 -21px;
@@ -92,13 +93,13 @@ a:hover {
 }
 .tw:before {
   content: "";
-  display: block;
+  display: inline-block;
   width: 20px;
   height: 20px;
   transition: all 0.25s ease;
   background: url(../img1/sprite.png);
   background-position: -22px 0;
-  left: -60px;
+  vertical-align: middle;
 }
 .tw:hover:before {
   background-position: -22px -21px;
@@ -108,12 +109,13 @@ a:hover {
 }
 .fb:before {
   content: "";
-  display: block;
+  display: inline-block;
   width: 20px;
   height: 20px;
   transition: all 0.25s ease;
   background: url(../img1/sprite.png);
   background-position: -40px 0;
+  vertical-align: middle;
 }
 .fb:hover:before {
   background-position: -40px -21px;
@@ -124,7 +126,7 @@ a:hover {
 }
 .header-contacts {
   padding: 30px 0;
-  filter: drop-shadow(0 0 5px rgba(0,0,0,0.1));
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 .header-contacts a {
   font-size: 16px;
@@ -351,9 +353,18 @@ main {
 figure {
   color: #9999a6;
 }
+figcaption a{
+  position: absolute;
+  width: 220px;
+  height: 238px;
+}
 figure p {
   font-size: 13px;
   margin: 0;
+  font-family: Arial, sans-serif;
+}
+figure h3{
+  font-family: Arial, sans-serif;
 }
 h3 {
   margin: 16px 0 10px;
@@ -447,6 +458,7 @@ h3 {
   font-size: 14px;
   color: #666666;
   font-family: "Arial", sans-serif;
+  line-height: 34px;
 }
 table {
   background-color: #e4e4ec;
@@ -490,17 +502,15 @@ tbody tr:hover {
   font-size: 13px;
   color: #666;
   font-family: "Arial", sans-serif;
+  margin-bottom: 8px;
 }
 .information a {
   text-decoration: none;
   font-size: 14px;
-  color: #666;
+  color: #fd8300;
   font-family: "Arial", sans-serif;
 }
 .information a:hover {
-  font-size: 14px;
-  color: #fd8300;
-  font-family: "Arial", sans-serif;
   text-decoration: underline;
 }
 .popular h2 {
