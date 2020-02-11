@@ -622,6 +622,44 @@ h3 {
 input {
   padding-left: 16px;
 }
+.styled-check{
+  visibility: hidden;
+  position: absolute;
+  z-index: -2;
+}
+.styled-check+label{
+  position: relative;
+}
+.styled-check+label::before,
+.styled-check+label::after{
+  content: "";
+  position: absolute;
+}
+.styled-check+label::before{
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  top: -2px;
+}
+.styled-check:checked+label::before{
+  border: 1px solid #c5c5d4;
+}
+.styled-check:checked+label::after{
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 3px;
+  transform: rotate(-45deg);
+  border-bottom: 2px solid #1f1f56;
+  border-left: 2px solid #1f1f56;
+  left: 5px;
+  top: 3px;
+}
+span{
+  padding-left: 25px;
+}
 .phone,
 .name {
   width: 210px;
